@@ -1,0 +1,14 @@
+{
+    "news": [
+      {
+        "id": 1,
+        "title": "É montagem vídeo que mostra furacão Dorian sobre as Bahamas",
+        "publishedAt": "09/15/2019 15:00:24",
+        "likes": 10,
+        "image": "https://piaui.folha.uol.com.br/lupa/wp-content/uploads/2019/09/furacao-dorian-bahamas-destaque.jpg",
+        "link": "https://piaui.folha.uol.com.br/lupa/2019/09/04/verificamos-video-furacao-dorian-bahamas/",
+        "content": "A informação, analisada pela Lupa, é falsa. O vídeo é na verdade uma animação por computador, criada pelo artista digital norte-americano Brent Shavnore..."
+     }
+
+    ]
+   }
