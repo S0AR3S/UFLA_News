@@ -1,0 +1,43 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>news-detail</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-card *ngIf="currentNews">
+      <ion-card-header>
+        <ion-card-title>
+          {{currentNews.title}}
+        </ion-card-title>
+        <ion-card-subtitle>Publicado em: {{currentNews.publishedAt}}</ion-card-subtitle>
+      </ion-card-header>
+      <img src="{{currentNews.image}}" />
+      <ion-card-content>
+        <ion-grid>
+          <ion-row>
+            <ion-tab-button>
+              <ion-icon name="heart"></ion-icon>
+              <ion-label>{{currentNews.likes}} likes</ion-label>
+            </ion-tab-button>
+            <ion-tab-button>
+              <ion-icon name="star-outline"></ion-icon>
+              <ion-label>Favoritar</ion-label>
+            </ion-tab-button>
+            <ion-tab-button (click)="shareWhatsApp()">
+              <ion-icon name="logo-whatsapp"></ion-icon>
+              <ion-label>Compartilhar</ion-label>
+            </ion-tab-button>
+          </ion-row>
+        </ion-grid>
+        <div class="ion-text-justify">{{currentNews.content}}</div>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
+  <ion-footer *ngIf="currentNews">
+    <ion-button fill="outline" expand="block" href="{{currentNews.link}}" target="_blank">Ler mais...</ion-button>
+  </ion-footer>
+  

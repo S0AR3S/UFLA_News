@@ -1,11 +1,14 @@
+
 export class NewsModel {
-    title: string;
-    likes: number;
-    publishedAt: Date;
-    image: string;
+    constructor(
+        public id: number,
+       public title: string,
+      public likes: number,
+      public publishedAt: Date,
+      public image: string,
+        public content: string,
+        public link: string,    
 
-    public constructor(news: any) {
-        Object.assign(this, news);
-    }
+    ) {}
+} 
 
-}
