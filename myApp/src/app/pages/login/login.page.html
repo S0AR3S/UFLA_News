@@ -1,9 +1,6 @@
 <ion-header>
-  <ion-toolbar color="dark">
+  <ion-toolbar color="primary">
     <ion-buttons slot="start">
-      <ion-button>
-        <ion-icon slot="icon-only" name="locate"></ion-icon>
-      </ion-button>
     </ion-buttons>
     <ion-title>UFLA News</ion-title>
   </ion-toolbar>
@@ -12,6 +9,7 @@
 
 <ion-content class="ion-padding">
   <ion-list>
+    <h3 class="login">Login</h3>
     <ion-item>
       <ion-label position="stacked">Email</ion-label>
       <ion-input [(ngModel)]="email"></ion-input>
@@ -23,7 +21,7 @@
   </ion-list>
 
 
-  <ion-button (click)="login()" expand="block" color="warning">Entrar</ion-button>
+  <ion-button (click)="login()" expand="block" color="secondary">Entrar</ion-button>
   <div class="ion-text-center ion-padding-vertical">Não possui uma conta ainda?</div>
-  <ion-button expand="block" fill='outline' routerLink="/register" routerDirection="forward" color="dark">Criar conta</ion-button>
+  <ion-button color="secondary" expand="block" routerLink="/register" routerDirection="forward" >Criar conta</ion-button>
 </ion-content>
