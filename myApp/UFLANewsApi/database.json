@@ -1,13 +1,14 @@
 {
-  "news": [
+  "boletins": [
     {
       "id": 1,
-      "title": "É montagem vídeo que mostra furacão Dorian sobre as Bahamas",
+      "title": "noticia 1",
       "likes": 20001,
       "publishedAt": "09/04/2019 14:21:00",
       "image": "https://piaui.folha.uol.com.br/lupa/wp-content/uploads/2019/09/furacao-dorian-bahamas-destaque.jpg",
       "content": "A informação, analisada pela Lupa, é falsa. O vídeo é na verdade uma animação por computador, criada pelo artista digital norte-americano Brent Shavnore. Ele compartilhou a obra em sua conta no Instagram no dia 19 de maio deste ano. Mais de 164 mil pessoas visualizaram o vídeo. Shavnore criou o “furacão” sobre uma foto da cidade de Miami, nos Estados Unidos. Em sua página pessoal, imagens que mostram tempestades e raios sobre cidades ou paisagens são comuns.",
-      "link": "https://piaui.folha.uol.com.br/lupa/2019/09/04/verificamos-video-furacao-dorian-bahamas/"
+      "idPub": 1 
+      
     },
     {
       "id": 2,
@@ -16,7 +17,7 @@
       "publishedAt": "09/04/2019 19:02:00",
       "image": "https://piaui.folha.uol.com.br/lupa/wp-content/uploads/2019/09/printglobopftopo.png",
       "content": "A informação analisada pela Lupa é falsa. A Lupa contatou a Divisão de Comunicação Social da Polícia Federal (PF), que disse não ter conhecimento de qualquer operação envolvendo a emissora. “Não chegou ao conhecimento desta DCS qualquer ocorrência nos moldes da descrita na consulta”, diz e-mail enviado pela PF.",
-      "link": "https://piaui.folha.uol.com.br/lupa/2019/09/03/verificamos-globo-pf/"
+      "idPub": 2
     },
     {
       "id": 3,
@@ -25,7 +26,7 @@
       "publishedAt": "09/02/2019 18:23:00",
       "image": "https://piaui.folha.uol.com.br/lupa/wp-content/uploads/2019/09/drauzioreproducao.png",
       "content": "O conteúdo analisado pela Lupa é falso. O doutor Drauzio Varella nunca deu entrevista ao programa Fantástico recomendando um suplemento alimentar para dores nas articulações. “Nunca fiz nem nunca farei propaganda de remédios, muito menos desses que prometem curas sem comprovação científica. Sempre que você vir meu nome associado a algum medicamento tenha certeza: é mentira, propaganda enganosa”, disse Varella, em nota enviada à Lupa.",
-      "link": "https://piaui.folha.uol.com.br/lupa/2019/09/02/verificamos-drauzio-dores-articulares/"
+      "idPub": 1
     }
   ],
   "users": [
@@ -45,36 +46,55 @@
       "id": 3
     }
   ],
-  "favorites": [
+  "publicadores": [
     {
-      "newsId": 1,
-      "userId": 2,
-      "favoriteType": 0,
-      "id": 11
+
+      "nome": "RU",
+      "foto": "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwiQzo6r38nlAhXpJrkGHQ-7BDsQjRx6BAgBEAQ&url=%2Furl%3Fsa%3Di%26source%3Dimages%26cd%3D%26ved%3D%26url%3Dhttps%253A%252F%252Fufla.br%252Fnoticias%252Finstitucional%252F13090-horario-do-restaurante-universitario-nas-ferias%26psig%3DAOvVaw1duK1TdsWBt2otFuuFS5za%26ust%3D1572722848927597&psig=AOvVaw1duK1TdsWBt2otFuuFS5za&ust=1572722848927597",
+      "id": 1
     },
     {
-      "newsId": 2,
-      "userId": 2,
-      "favoriteType": 0,
-      "id": 14
+      "nome": "PRG",
+      "foto": "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwj-wrLR38nlAhWeKLkGHQzSCQcQjRx6BAgBEAQ&url=%2Furl%3Fsa%3Di%26source%3Dimages%26cd%3D%26ved%3D%26url%3Dhttps%253A%252F%252Ftwitter.com%252Fprgufla%252Fstatus%252F971732096384454656%26psig%3DAOvVaw3LM7ZRpcw3oQhheWZTuBbG%26ust%3D1572722934487160&psig=AOvVaw3LM7ZRpcw3oQhheWZTuBbG&ust=1572722934487160",
+      "id": 2
     },
     {
-      "newsId": 1,
-      "userId": 2,
-      "favoriteType": 1,
-      "id": 15
+      "nome": "DEX",
+      "foto": "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwi_4NXH38nlAhUBGbkGHfAlCo0QjRx6BAgBEAQ&url=%2Furl%3Fsa%3Di%26source%3Dimages%26cd%3D%26ved%3D2ahUKEwiAvZ7G38nlAhWEC9QKHRwkBvcQjRx6BAgBEAQ%26url%3Dhttp%253A%252F%252Frevista.numberone.com.br%252Fseja-um-aluno%252Fconvenio-parceiro%252Fufla-universidade-federal-de-lavras%26psig%3DAOvVaw01FKSIRPbxk8TAO2ma_1mb%26ust%3D1572722877085325&psig=AOvVaw01FKSIRPbxk8TAO2ma_1mb&ust=1572722877085325",
+      "id": 3
     },
     {
-      "newsId": 2,
-      "userId": 2,
-      "favoriteType": 1,
-      "id": 16
+      "nome": "DCC",
+      "foto": "https://www.google.com/url?sa=i&source=images&cd=&ved=&url=http%3A%2F%2Fca.computacao.ufla.br%2Fsite%2Fo-curso%2F&psig=AOvVaw2YAdd4EIOyQbp9QtaQtvJS&ust=1572722828014515",
+      "id": 4
     },
     {
-      "newsId": 2,
-      "userId": 1,
-      "favoriteType": 1,
-      "id": 17
+      "nome": "PRAEC",
+      "foto": "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwittaj43snlAhWDGLkGHbXvCY4QjRx6BAgBEAQ&url=%2Furl%3Fsa%3Di%26source%3Dimages%26cd%3D%26ved%3D%26url%3Dhttps%253A%252F%252Fwww.facebook.com%252FPRAECUFLA%252Fposts%252F%26psig%3DAOvVaw2stTJvTTWhuDvDJJb3RV3V%26ust%3D1572722746961701&psig=AOvVaw2stTJvTTWhuDvDJJb3RV3V&ust=1572722746961701",
+      "id": 5
+    }
+  ],
+  "inscritos": [
+    {
+
+      "iduser": 1,
+      "idpublicador": 1
+    },
+    {
+      "iduser": 2,
+      "idpublicador": 2
+    },
+    {
+      "iduser": 3,
+      "idpublicador": 3
+    },
+    {
+      "iduser": 4,
+      "idpublicador": 4
+    },
+    {
+      "iduser": 5,
+      "idpublicador": 5
     }
   ]
 }
