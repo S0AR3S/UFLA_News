@@ -2,31 +2,33 @@
   "boletins": [
     {
       "id": 1,
-      "title": "noticia 1",
-      "likes": 20001,
+      "title": "V Congresso de Inovação e Metodologias no Ensino Superior e Tecnológico",
+      "likes": 17,
       "publishedAt": "09/04/2019 14:21:00",
-      "image": "https://piaui.folha.uol.com.br/lupa/wp-content/uploads/2019/09/furacao-dorian-bahamas-destaque.jpg",
-      "content": "A informação, analisada pela Lupa, é falsa. O vídeo é na verdade uma animação por computador, criada pelo artista digital norte-americano Brent Shavnore. Ele compartilhou a obra em sua conta no Instagram no dia 19 de maio deste ano. Mais de 164 mil pessoas visualizaram o vídeo. Shavnore criou o “furacão” sobre uma foto da cidade de Miami, nos Estados Unidos. Em sua página pessoal, imagens que mostram tempestades e raios sobre cidades ou paisagens são comuns.",
-      "idPub": 1 
-      
+      "image": "https://ufla.br/images/noticias/2019/selos/oportunidade.jpg",
+      "content": "Entre os dias 28 e 30 de abril de 2020, o V Congresso de Inovação e Metodologias no Ensino Superior e Tecnol�gico (V CIM) ocorrer� na UFLA. A tem�tica ser�: ?Inclus�o, perman�ncia e sucesso: como inovar para alcan�ar cada estudante??      ",
+      "link": "https://ufla.br/noticias/ensino/13383-v-congresso-de-inovacao-e-metodologias-no-ensino-superior-e-tecnologico/",
+      "idPub": 1
     },
     {
       "id": 2,
-      "title": "Polícia Federal não realizou operação contra a Rede Globo em 30 de agosto",
-      "likes": 5000002,
+      "title": "UFLA participa de plenária no Seminário Internacional do Grupo Coimbra de Universidades Brasileiras",
+      "likes": 4012,
       "publishedAt": "09/04/2019 19:02:00",
-      "image": "https://piaui.folha.uol.com.br/lupa/wp-content/uploads/2019/09/printglobopftopo.png",
-      "content": "A informação analisada pela Lupa é falsa. A Lupa contatou a Divisão de Comunicação Social da Polícia Federal (PF), que disse não ter conhecimento de qualquer operação envolvendo a emissora. “Não chegou ao conhecimento desta DCS qualquer ocorrência nos moldes da descrita na consulta”, diz e-mail enviado pela PF.",
+      "image": "https://ufla.br/images/noticias/2019/10_out/WhatsApp_Image_2019-10-31_at_08.09.29.jpeg",
+      "content": "O Grupo Coimbra de Universidades Brasileiras (GCUB), em parceria com a Universidade Federal do Amazonas (Ufam), realizou nesta semana, entre 28 e 31 de outubro, a XII Assembleia Geral do Grupo Coimbra de Universidades Brasileiras e o XI Seminário Internacional do Grupo Coimbra de Universidades Brasileiras. A Universidade Federal de Lavras (UFLA) esteve representada no evento pelo professor Márcio Machado Ladeira, assessor do reitor.",
+      "link": "https://ufla.br/noticias/institucional/13384-ufla-participa-de-plenaria-no-seminario-internacional-do-grupo-coimbra-de-universidades-brasileiras",
       "idPub": 2
     },
     {
       "id": 3,
-      "title": "É falso que Drauzio Varella recomendou suplemento contra dores articulares",
+      "title": "Núcleo de estudos da UFLA promoveu tarde de atividades para as crianças da Escola Municipal Drª Dâmina",
       "likes": 12,
       "publishedAt": "09/02/2019 18:23:00",
-      "image": "https://piaui.folha.uol.com.br/lupa/wp-content/uploads/2019/09/drauzioreproducao.png",
-      "content": "O conteúdo analisado pela Lupa é falso. O doutor Drauzio Varella nunca deu entrevista ao programa Fantástico recomendando um suplemento alimentar para dores nas articulações. “Nunca fiz nem nunca farei propaganda de remédios, muito menos desses que prometem curas sem comprovação científica. Sempre que você vir meu nome associado a algum medicamento tenha certeza: é mentira, propaganda enganosa”, disse Varella, em nota enviada à Lupa.",
-      "idPub": 1
+      "image": "https://ufla.br/images/arquivos/2019/11-Novembro/IMG_0051.JPG",
+      "content": "Na tarde dessa quinta-feira (31/10), o Núcleo de Estudos em Obesidade e Diabetes (Neodia), da Universidade Federal de Lavras (UFLA), em parceria com o Núcleo de Estudos em Suinocultura (Nesui)  e com o grupo de Yoga, promoveu uma tarde de comemoração ao dia das crianças com os alunos do projeto de extensão 'Programa de Intervenção Multidisciplinar nas Escolas: Prevenção da Obesidade e Diabetes Tipo 2 em Crianças de 6 a 8 Anos', desenvolvido na  Escola Municipal Dra. Dâmina.",
+      "link": "https://ufla.br/noticias/extensao/13389-nucleos-de-estudos-da-ufla-promoveu-tarde-de-atividades-para-as-criancas-da-escola-municipal-dr-damina",
+      "idPub": 3
     }
   ],
   "users": [
@@ -44,6 +46,52 @@
       "name": "tadeu",
       "email": "tadeu@tadeu.com",
       "id": 3
+    }
+  ],
+    "boletins": [
+    {
+      "id": 1,
+      "title": "V Congresso de Inovação e Metodologias no Ensino Superior e Tecnológico",
+      "likes": 17,
+      "publishedAt": "09/04/2019 14:21:00",
+      "image": "https://ufla.br/images/noticias/2019/selos/oportunidade.jpg",
+      "content": [
+        {
+            "idSecao": 1,
+            "titulo": "blabla",
+            "content": "content"
+        }],
+      // "Entre os dias 28 e 30 de abril de 2020, o V Congresso de Inovação e Metodologias no Ensino Superior e Tecnol�gico (V CIM) ocorrer� na UFLA. A tem�tica ser�: ?Inclus�o, perman�ncia e sucesso: como inovar para alcan�ar cada estudante??      ",
+      "link": "https://ufla.br/noticias/ensino/13383-v-congresso-de-inovacao-e-metodologias-no-ensino-superior-e-tecnologico/",
+      "idPub": 1
+    },
+    {
+      "id": 2,
+      "title": "UFLA participa de plenária no Seminário Internacional do Grupo Coimbra de Universidades Brasileiras",
+      "likes": 4012,
+      "publishedAt": "09/04/2019 19:02:00",
+      "image": "https://ufla.br/images/noticias/2019/10_out/WhatsApp_Image_2019-10-31_at_08.09.29.jpeg",
+      "content": "O Grupo Coimbra de Universidades Brasileiras (GCUB), em parceria com a Universidade Federal do Amazonas (Ufam), realizou nesta semana, entre 28 e 31 de outubro, a XII Assembleia Geral do Grupo Coimbra de Universidades Brasileiras e o XI Seminário Internacional do Grupo Coimbra de Universidades Brasileiras. A Universidade Federal de Lavras (UFLA) esteve representada no evento pelo professor Márcio Machado Ladeira, assessor do reitor.",
+      "link": "https://ufla.br/noticias/institucional/13384-ufla-participa-de-plenaria-no-seminario-internacional-do-grupo-coimbra-de-universidades-brasileiras",
+      "idPub": 2
+    },
+    {
+      "id": 3,
+      "title": "Núcleo de estudos da UFLA promoveu tarde de atividades para as crianças da Escola Municipal Drª Dâmina",
+      "likes": 12,
+      "publishedAt": "09/02/2019 18:23:00",
+      "image": "https://ufla.br/images/arquivos/2019/11-Novembro/IMG_0051.JPG",
+      "content": "Na tarde dessa quinta-feira (31/10), o Núcleo de Estudos em Obesidade e Diabetes (Neodia), da Universidade Federal de Lavras (UFLA), em parceria com o Núcleo de Estudos em Suinocultura (Nesui)  e com o grupo de Yoga, promoveu uma tarde de comemoração ao dia das crianças com os alunos do projeto de extensão 'Programa de Intervenção Multidisciplinar nas Escolas: Prevenção da Obesidade e Diabetes Tipo 2 em Crianças de 6 a 8 Anos', desenvolvido na  Escola Municipal Dra. Dâmina.",
+      "link": "https://ufla.br/noticias/extensao/13389-nucleos-de-estudos-da-ufla-promoveu-tarde-de-atividades-para-as-criancas-da-escola-municipal-dr-damina",
+      "idPub": 3
+    }
+  ],
+  "favorites": [
+    {
+      "newsId": 1,
+      "userId": 2,
+      "favoriteType": 0,
+      "id": 1
     }
   ],
   "publicadores": [
@@ -76,7 +124,6 @@
   ],
   "inscritos": [
     {
-
       "iduser": 1,
       "idpublicador": 1
     },

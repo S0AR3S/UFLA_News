@@ -1,12 +1,3 @@
-<ion-header>
-  <ion-toolbar color="primary">
-    <ion-buttons slot="start">
-    </ion-buttons>
-    <ion-title>UFLA News</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-
 <ion-content class="ion-padding">
   <ion-list>
     <h3 class="login">Login</h3>
@@ -20,8 +11,18 @@
     </ion-item>
   </ion-list>
 
-
-  <ion-button (click)="login()" expand="block" color="secondary">Entrar</ion-button>
-  <div class="ion-text-center ion-padding-vertical">Não possui uma conta ainda?</div>
-  <ion-button color="secondary" expand="block" routerLink="/register" routerDirection="forward" >Criar conta</ion-button>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12>  <ion-button (click)="login()" expand="block" color="secondary">Entrar</ion-button></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6><div class="ion-text-center ion-padding-vertical">Não possui uma conta ainda?</div></ion-col>
+      <ion-col col-6><ion-button color="secondary" expand="block" routerLink="/register" routerDirection="forward" >Criar conta</ion-button></ion-col>
+    </ion-row>
+  </ion-grid>
+  
+  <div>
+    
+    
+  </div>
 </ion-content>

@@ -9,7 +9,7 @@ export enum FavoriteTypeModel {
 export class FavoriteModel {
     public constructor(
         public user: UserModel,
-        public news: NewsModel,
+        public boletins: NewsModel,
         public favoriteType: FavoriteTypeModel,
         public id?: number) { }
 }

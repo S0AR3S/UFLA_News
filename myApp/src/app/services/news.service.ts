@@ -30,7 +30,7 @@ export class NewsService {
   async getAll(): Promise<NewsModel[]> {
     const options = await this.getHttpOptions();
 
-    return this.http.get(`${API_URL}/news`, options).map(
+    return this.http.get(`${API_URL}/boletins`, options).map(
       (itens: NewsModel[]) => {
         return itens.map(
           (item: NewsModel) => {
