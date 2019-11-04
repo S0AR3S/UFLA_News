@@ -1,16 +1,11 @@
-<ion-header>
-  <ion-toolbar color="primary">
-    <ion-buttons slot="start">
-    </ion-buttons>
-    <ion-title>UFLA News</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
   <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>
 
+  <ion-searchbar showCancelButton="focus" placeholder="Encontrar notícias" (ionChange)="updateListNews($event)">
+  </ion-searchbar>
+  
   <ion-card *ngFor="let favorite of lstFavoriteNews" [routerLink]="['/details', favorite.news.id]">
     <img src="{{favorite.news.image}}" />
     <ion-card-header>
