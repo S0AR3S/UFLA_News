@@ -45,7 +45,7 @@ export class FavoritesService {
       (itens: FavoriteModel[]) => {
         return itens.map(
           (item: FavoriteModel) => {
-            return new FavoriteModel(item.user, item.news, item.favoriteType, item.id);
+            return new FavoriteModel(item.user, item.boletins, item.favoriteType, item.id);
           }
         )
       }
@@ -54,7 +54,7 @@ export class FavoritesService {
 
   async add(favorite: FavoriteModel): Promise<number> {    
     const data: any = {
-      newsId: favorite.news.id,
+      newsId: favorite.boletins.id,
       userId: favorite.user.id,
       favoriteType: favorite.favoriteType,
     }

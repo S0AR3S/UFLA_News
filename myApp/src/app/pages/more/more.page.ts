@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from 'src/app/services/auth.service';
+import { publicadoresService } from 'src/app/services/publicadores.service';
+import { publicadoresModel } from 'src/app/model/publicadores.model';
+
 
 @Component({
   selector: 'app-more',
@@ -7,14 +9,26 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./more.page.scss'],
 })
 export class MorePage implements OnInit {
+  lstPublicadores: publicadoresModel[];
 
-  constructor(private authService: AuthService) { }
+  constructor(public publicadoresService: publicadoresService) { }
 
-  ngOnInit() {
+  async ngOnInit() {
+    this.lstPublicadores = await this.publicadoresService.getAll();
   }
 
-  async logout() {
-    await this.authService.logout();
+  async doRefresh(event: any) {
+    try {
+      this.lstPublicadores = await this.publicadoresService.getAll();
+    } finally {
+      event.target.complete();
+    }    
   }
+
+  async updateListPublicadores(event: any) {
+    this.lstPublicadores = await this.publicadoresService.searchByTitle(event.target.value);
+  }
+
+
 
 }

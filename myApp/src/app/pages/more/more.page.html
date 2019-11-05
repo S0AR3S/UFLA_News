@@ -1,21 +1,17 @@
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-searchbar showCancelButton="focus" placeholder="Encontrar Publicadores" (ionChange)="updateListPublicadores($event)">
+  </ion-searchbar>
 <ion-content class="ion-padding">
-    <!-- <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
-        <ion-refresher-content></ion-refresher-content>
-      </ion-refresher>
-    
-      <ion-searchbar showCancelButton="focus" placeholder="Encontrar notícias" (ionChange)="updateListNews($event)">
-      </ion-searchbar>
-    
-      <ion-card *ngFor="let favorite of lstFavoriteNews" [routerLink]="['/details', favorite.news.id]" color="primary">
-        <img src="{{favorite.news.image}}" />
+      <ion-card *ngFor="let publicadores of lstPublicadores"  color="primary">
+        <img src="{{publicadores.foto}}" />
         <ion-card-header>
-          <ion-card-title>
-            {{favorite.news.title}}
+          <ion-card-title >
+            {{publicadores.nome}}
           </ion-card-title>
-          <ion-card-subtitle>{{favorite.news.likes | likes}} likes | {{favorite.news.publishedAt | timeAgo}}</ion-card-subtitle>
-        </ion-card-header>
-      </ion-card> -->
-    
-  <div class="ion-text-center ion-padding-vertical">Deseja desconectar-se?</div>
-  <ion-button (click)="logout()" color="danger" expand="block" fill='outline'>Sair</ion-button>
+        </ion-card-header>    
+      </ion-card>
 </ion-content>
