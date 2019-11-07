@@ -43,47 +43,14 @@
       "id": 2
     },
     {
+      "name": "bruno",
+      "email": "bruno@email.com",
+      "id": 4
+    },
+    {
       "name": "tadeu",
       "email": "tadeu@tadeu.com",
       "id": 3
-    }
-  ],
-    "boletins": [
-    {
-      "id": 1,
-      "title": "V Congresso de Inovação e Metodologias no Ensino Superior e Tecnológico",
-      "likes": 17,
-      "publishedAt": "09/04/2019 14:21:00",
-      "image": "https://ufla.br/images/noticias/2019/selos/oportunidade.jpg",
-      "content": [
-        {
-            "idSecao": 1,
-            "titulo": "blabla",
-            "content": "content"
-        }],
-      // "Entre os dias 28 e 30 de abril de 2020, o V Congresso de Inovação e Metodologias no Ensino Superior e Tecnol�gico (V CIM) ocorrer� na UFLA. A tem�tica ser�: ?Inclus�o, perman�ncia e sucesso: como inovar para alcan�ar cada estudante??      ",
-      "link": "https://ufla.br/noticias/ensino/13383-v-congresso-de-inovacao-e-metodologias-no-ensino-superior-e-tecnologico/",
-      "idPub": 1
-    },
-    {
-      "id": 2,
-      "title": "UFLA participa de plenária no Seminário Internacional do Grupo Coimbra de Universidades Brasileiras",
-      "likes": 4012,
-      "publishedAt": "09/04/2019 19:02:00",
-      "image": "https://ufla.br/images/noticias/2019/10_out/WhatsApp_Image_2019-10-31_at_08.09.29.jpeg",
-      "content": "O Grupo Coimbra de Universidades Brasileiras (GCUB), em parceria com a Universidade Federal do Amazonas (Ufam), realizou nesta semana, entre 28 e 31 de outubro, a XII Assembleia Geral do Grupo Coimbra de Universidades Brasileiras e o XI Seminário Internacional do Grupo Coimbra de Universidades Brasileiras. A Universidade Federal de Lavras (UFLA) esteve representada no evento pelo professor Márcio Machado Ladeira, assessor do reitor.",
-      "link": "https://ufla.br/noticias/institucional/13384-ufla-participa-de-plenaria-no-seminario-internacional-do-grupo-coimbra-de-universidades-brasileiras",
-      "idPub": 2
-    },
-    {
-      "id": 3,
-      "title": "Núcleo de estudos da UFLA promoveu tarde de atividades para as crianças da Escola Municipal Drª Dâmina",
-      "likes": 12,
-      "publishedAt": "09/02/2019 18:23:00",
-      "image": "https://ufla.br/images/arquivos/2019/11-Novembro/IMG_0051.JPG",
-      "content": "Na tarde dessa quinta-feira (31/10), o Núcleo de Estudos em Obesidade e Diabetes (Neodia), da Universidade Federal de Lavras (UFLA), em parceria com o Núcleo de Estudos em Suinocultura (Nesui)  e com o grupo de Yoga, promoveu uma tarde de comemoração ao dia das crianças com os alunos do projeto de extensão 'Programa de Intervenção Multidisciplinar nas Escolas: Prevenção da Obesidade e Diabetes Tipo 2 em Crianças de 6 a 8 Anos', desenvolvido na  Escola Municipal Dra. Dâmina.",
-      "link": "https://ufla.br/noticias/extensao/13389-nucleos-de-estudos-da-ufla-promoveu-tarde-de-atividades-para-as-criancas-da-escola-municipal-dr-damina",
-      "idPub": 3
     }
   ],
   "favorites": [
@@ -98,50 +65,60 @@
     {
 
       "nome": "RU",
-      "foto": "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwiQzo6r38nlAhXpJrkGHQ-7BDsQjRx6BAgBEAQ&url=%2Furl%3Fsa%3Di%26source%3Dimages%26cd%3D%26ved%3D%26url%3Dhttps%253A%252F%252Fufla.br%252Fnoticias%252Finstitucional%252F13090-horario-do-restaurante-universitario-nas-ferias%26psig%3DAOvVaw1duK1TdsWBt2otFuuFS5za%26ust%3D1572722848927597&psig=AOvVaw1duK1TdsWBt2otFuuFS5za&ust=1572722848927597",
+      "foto": "http://www.ufla.br/dcom/wp-content/uploads/2015/07/cropped-logo-ufla-1.jpg",
       "id": 1
     },
     {
       "nome": "PRG",
-      "foto": "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwj-wrLR38nlAhWeKLkGHQzSCQcQjRx6BAgBEAQ&url=%2Furl%3Fsa%3Di%26source%3Dimages%26cd%3D%26ved%3D%26url%3Dhttps%253A%252F%252Ftwitter.com%252Fprgufla%252Fstatus%252F971732096384454656%26psig%3DAOvVaw3LM7ZRpcw3oQhheWZTuBbG%26ust%3D1572722934487160&psig=AOvVaw3LM7ZRpcw3oQhheWZTuBbG&ust=1572722934487160",
+      "foto": "http://www.ufla.br/dcom/wp-content/uploads/2015/07/cropped-logo-ufla-1.jpg",
       "id": 2
     },
     {
       "nome": "DEX",
-      "foto": "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwi_4NXH38nlAhUBGbkGHfAlCo0QjRx6BAgBEAQ&url=%2Furl%3Fsa%3Di%26source%3Dimages%26cd%3D%26ved%3D2ahUKEwiAvZ7G38nlAhWEC9QKHRwkBvcQjRx6BAgBEAQ%26url%3Dhttp%253A%252F%252Frevista.numberone.com.br%252Fseja-um-aluno%252Fconvenio-parceiro%252Fufla-universidade-federal-de-lavras%26psig%3DAOvVaw01FKSIRPbxk8TAO2ma_1mb%26ust%3D1572722877085325&psig=AOvVaw01FKSIRPbxk8TAO2ma_1mb&ust=1572722877085325",
+      "foto": "http://www.ufla.br/dcom/wp-content/uploads/2015/07/cropped-logo-ufla-1.jpg",
       "id": 3
     },
     {
       "nome": "DCC",
-      "foto": "https://www.google.com/url?sa=i&source=images&cd=&ved=&url=http%3A%2F%2Fca.computacao.ufla.br%2Fsite%2Fo-curso%2F&psig=AOvVaw2YAdd4EIOyQbp9QtaQtvJS&ust=1572722828014515",
+      "foto": "http://www.ufla.br/dcom/wp-content/uploads/2015/07/cropped-logo-ufla-1.jpg",
       "id": 4
     },
     {
       "nome": "PRAEC",
-      "foto": "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwittaj43snlAhWDGLkGHbXvCY4QjRx6BAgBEAQ&url=%2Furl%3Fsa%3Di%26source%3Dimages%26cd%3D%26ved%3D%26url%3Dhttps%253A%252F%252Fwww.facebook.com%252FPRAECUFLA%252Fposts%252F%26psig%3DAOvVaw2stTJvTTWhuDvDJJb3RV3V%26ust%3D1572722746961701&psig=AOvVaw2stTJvTTWhuDvDJJb3RV3V&ust=1572722746961701",
+      "foto": "http://www.ufla.br/dcom/wp-content/uploads/2015/07/cropped-logo-ufla-1.jpg",
       "id": 5
     }
   ],
   "inscritos": [
     {
       "iduser": 1,
-      "idpublicador": 1
+      "idpublicador": 1,
+      "id":1
     },
     {
       "iduser": 2,
-      "idpublicador": 2
+      "idpublicador": 2,
+      "id":2
     },
     {
       "iduser": 3,
-      "idpublicador": 3
+      "idpublicador": 3,
+      "id":3
     },
     {
       "iduser": 4,
-      "idpublicador": 4
+      "idpublicador": 4,
+      "id":4
+    },
+    {
+      "iduser": 4,
+      "idpublicador": 2,
+      "id":6
     },
     {
       "iduser": 5,
-      "idpublicador": 5
+      "idpublicador": 5,
+      "id":5
     }
   ]
 }

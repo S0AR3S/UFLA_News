@@ -6,7 +6,7 @@
   <ion-searchbar showCancelButton="focus" placeholder="Encontrar Publicadores" (ionChange)="updateListPublicadores($event)">
   </ion-searchbar>
 <ion-content class="ion-padding">
-      <ion-card *ngFor="let publicadores of lstPublicadores"  color="primary">
+      <ion-card class="pub" *ngFor="let publicadores of lstPublicadores"  color="primary">
         <img src="{{publicadores.foto}}" />
         <ion-card-header>
           <ion-card-title >
