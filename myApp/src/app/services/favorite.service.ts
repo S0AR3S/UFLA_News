@@ -14,6 +14,7 @@ const API_URL: string = "http://localhost:8000";
   providedIn: 'root'
 })
 export class FavoritesService {
+  lista: FavoriteModel[];
 
 
   constructor(public http: HttpClient, public authService: AuthService, public publicadoresService: publicadoresService) { }
@@ -42,16 +43,20 @@ export class FavoritesService {
   async getInscritos(iduser: number): Promise<publicadoresModel[]> {
     const options = await this.getHttpOptions();
 
-    var teste=this.getAllByUser(iduser)
-    console.log(teste);
+    this.lista = await this.getAllByUser(iduser)
 
-      return this.http.get(`${API_URL}/inscritos?idpublicador=${iduser}`, options).map(
+      return this.http.get(`${API_URL}/publicadores?id=${this.lista[0].idpublicador}`, options).map(
+        
       (itens: publicadoresModel[]) => {
+        
         return itens.map(
           (item: publicadoresModel) => {
-            return new publicadoresModel(item.id, item.nome, item.foto);
+            return new publicadoresModel(item.id,item.nome, item.foto, );
           }
+          
+          
           )
+         
         }
       ).toPromise();
     }
@@ -63,8 +68,8 @@ export class FavoritesService {
       (itens: FavoriteModel[]) => {
         return itens.map(
           (item: FavoriteModel) => {
-            var inscrito= new FavoriteModel(item.iduser, item.idpublicador, item.id);
-            return inscrito;
+            return new FavoriteModel(item.iduser, item.idpublicador, item.id);
+            
           }
           )
         }

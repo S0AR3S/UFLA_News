@@ -3,15 +3,15 @@
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>
 
-  <ion-searchbar showCancelButton="focus" placeholder="Encontrar meus publicadores" (ionChange)="updateListNews($event)">
+  <ion-searchbar showCancelButton="focus" placeholder="Encontrar meus publicadores" (ionChange)="updateListInscritos($event)">
   </ion-searchbar>
-  
-  <ion-card *ngFor="let inscritos of lstInscritos">
-    <img src="{{inscritos.publicadores.foto}}" />
-    <ion-card-header>
-      <ion-card-title>
-        {{inscritos.publicadores.nome}}
-      </ion-card-title>
-    </ion-card-header>
-  </ion-card>
-</ion-content>
+  <ion-content class="ion-padding">
+    <ion-card class="pub" *ngFor="let inscritos of lstInscritos"  color="primary">
+      <img src="{{inscritos.foto}}" />
+      <ion-card-header>
+        <ion-card-title>
+          {{inscritos.nome}}
+        </ion-card-title>
+      </ion-card-header>
+    </ion-card>
+  </ion-content>
