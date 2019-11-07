@@ -4,10 +4,11 @@ import { NewsModel } from 'src/app/model/news.model';
 import { NewsService } from 'src/app/services/news.service';
 import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 import { FavoritesService } from 'src/app/services/favorite.service';
-import { FavoriteModel, FavoriteTypeModel } from 'src/app/model/favorite.model';
+import { FavoriteModel} from 'src/app/model/favorite.model';
 import { UserModel } from 'src/app/model/user.model';
 import { AuthService } from 'src/app/services/auth.service';
 import { UserService } from 'src/app/services/user.service';
+import { publicadoresModel } from 'src/app/model/publicadores.model';
 
 @Component({
   selector: 'app-news-detail',
@@ -21,6 +22,7 @@ export class NewsDetailPage implements OnInit {
   likeId: number;
   newsId: number;
   user: UserModel;
+  publicadores: publicadoresModel;
 
   constructor(
     public activatedRoute: ActivatedRoute,
@@ -38,8 +40,8 @@ export class NewsDetailPage implements OnInit {
     this.newsId = parseInt(this.activatedRoute.snapshot.paramMap.get('id'));
 
     this.currentNews = await this.newsService.searchById(this.newsId);
-    this.starId = await this.favoritesService.getFavoriteId(this.user.id, this.newsId, FavoriteTypeModel.STAR);
-    this.likeId = await this.favoritesService.getFavoriteId(this.user.id, this.newsId, FavoriteTypeModel.LIKE);
+    this.starId = await this.favoritesService.getFavoriteId(this.user.id, this.newsId);
+    this.likeId = await this.favoritesService.getFavoriteId(this.user.id, this.newsId);
   }
 
   async shareWhatsApp() {
@@ -50,26 +52,26 @@ export class NewsDetailPage implements OnInit {
     }
   }
 
-  async handleFavorite() {
-    if (!this.starId) {
-      const favorite = new FavoriteModel(this.user, this.currentNews, FavoriteTypeModel.STAR);
-      this.starId = await this.favoritesService.add(favorite);
-    } else {
-      await this.favoritesService.delete(this.starId);
-      this.starId = null;
-    }
-  }
+  // async handleFavorite() {
+  //   if (!this.starId) {
+  //     const favorite = new FavoriteModel(this.user, this.publicadores);
+  //     this.starId = await this.favoritesService.add(favorite);
+  //   } else {
+  //     await this.favoritesService.delete(this.starId);
+  //     this.starId = null;
+  //   }
+  // }
 
-  async handleLike() {
-    if (!this.likeId) {
-      let favorite = new FavoriteModel(this.user, this.currentNews, FavoriteTypeModel.LIKE);
-      this.likeId = await this.favoritesService.add(favorite);
-      this.currentNews.likes += 1;
-    } else {
-      await this.favoritesService.delete(this.likeId);
-      this.likeId = null;
-      this.currentNews.likes -= 1;
-    }
-    this.currentNews = await this.newsService.update(this.currentNews);
-  }
+  // async handleLike() {
+  //   if (!this.likeId) {
+  //     let favorite = new FavoriteModel(this.user, this.publicadores);
+  //     this.likeId = await this.favoritesService.add(favorite);
+  //     this.currentNews.likes += 1;
+  //   } else {
+  //     await this.favoritesService.delete(this.likeId);
+  //     this.likeId = null;
+  //     this.currentNews.likes -= 1;
+  //   }
+  //   this.currentNews = await this.newsService.update(this.currentNews);
+  // }
 }

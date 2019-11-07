@@ -1,15 +1,11 @@
-import { NewsModel } from './news.model';
-import { UserModel } from './user.model';
 
-export enum FavoriteTypeModel {
-    STAR = 0,
-    LIKE = 1
-}
+import { UserModel } from './user.model';
+import { publicadoresModel } from './publicadores.model';
+
 
 export class FavoriteModel {
     public constructor(
-        public user: UserModel,
-        public boletins: NewsModel,
-        public favoriteType: FavoriteTypeModel,
+        public iduser: number,
+        public idpublicador: number,
         public id?: number) { }
 }

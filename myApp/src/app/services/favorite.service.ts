@@ -3,8 +3,10 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import 'rxjs/Rx';
 
-import { FavoriteModel, FavoriteTypeModel } from '../model/favorite.model';
+import { FavoriteModel } from '../model/favorite.model';
 import { AuthService } from './auth.service';
+import {publicadoresService} from './publicadores.service';
+import { publicadoresModel } from '../model/publicadores.model';
 
 const API_URL: string = "http://localhost:8000";
 
@@ -14,7 +16,7 @@ const API_URL: string = "http://localhost:8000";
 export class FavoritesService {
 
 
-  constructor(public http: HttpClient, public authService: AuthService) { }
+  constructor(public http: HttpClient, public authService: AuthService, public publicadoresService: publicadoresService) { }
 
   async getHttpOptions() {
     const token = await this.authService.getAuthToken();
@@ -28,40 +30,56 @@ export class FavoritesService {
     return options;
   }
 
-  async getFavoriteId(userId: number, newsId: number, type: FavoriteTypeModel): Promise<number> {
+  async getFavoriteId(iduser: number, idpublicador: number): Promise<number> {
     const options = await this.getHttpOptions();
 
-    return this.http.get(`${API_URL}/favorites?userId=${userId}&newsId=${newsId}&favoriteType=${type}`, options).map(
-      (favorites: FavoriteModel[]) => {
-        return (favorites.length == 0) ? null : favorites[0].id;
+    return this.http.get(`${API_URL}/inscritos?iduser=${iduser}&idpublicador=${idpublicador}`, options).map(
+      (inscritos: FavoriteModel[]) => {
+        return (inscritos.length == 0) ? null : inscritos[0].id;
       }
     ).toPromise();
   }
-
-  async getAllByUser(userId: number, type: FavoriteTypeModel): Promise<FavoriteModel[]> {
+  async getInscritos(iduser: number): Promise<publicadoresModel[]> {
     const options = await this.getHttpOptions();
 
-    return this.http.get(`${API_URL}/favorites?_expand=news&_expand=user&userId=${userId}&favoriteType=${type}`, options).map(
+    var teste=this.getAllByUser(iduser)
+    console.log(teste);
+
+      return this.http.get(`${API_URL}/inscritos?idpublicador=${iduser}`, options).map(
+      (itens: publicadoresModel[]) => {
+        return itens.map(
+          (item: publicadoresModel) => {
+            return new publicadoresModel(item.id, item.nome, item.foto);
+          }
+          )
+        }
+      ).toPromise();
+    }
+
+  async getAllByUser(iduser: number): Promise<FavoriteModel[]> {
+    const options = await this.getHttpOptions();
+
+    return this.http.get(`${API_URL}/inscritos?iduser=${iduser}`, options).map(
       (itens: FavoriteModel[]) => {
         return itens.map(
           (item: FavoriteModel) => {
-            return new FavoriteModel(item.user, item.boletins, item.favoriteType, item.id);
+            var inscrito= new FavoriteModel(item.iduser, item.idpublicador, item.id);
+            return inscrito;
           }
-        )
-      }
-    ).toPromise();
-  }
+          )
+        }
+      ).toPromise();
+    }
 
-  async add(favorite: FavoriteModel): Promise<number> {    
+  async add(inscritos: FavoriteModel): Promise<number> {    
     const data: any = {
-      newsId: favorite.boletins.id,
-      userId: favorite.user.id,
-      favoriteType: favorite.favoriteType,
+      idpublicador: inscritos.idpublicador,
+      iduser: inscritos.iduser,
     }
 
     const options = await this.getHttpOptions();
 
-    return this.http.post(`${API_URL}/favorites`, data, options).map(
+    return this.http.post(`${API_URL}/inscritos`, data, options).map(
       (favorite: FavoriteModel) => {
         return favorite.id;
       }
@@ -71,6 +89,6 @@ export class FavoritesService {
   async delete(id: number): Promise<any> {
     const options = await this.getHttpOptions();
 
-    return this.http.delete(`${API_URL}/favorites/${id}`, options).toPromise();
+    return this.http.delete(`${API_URL}/inscritos/${id}`, options).toPromise();
   }
 }
