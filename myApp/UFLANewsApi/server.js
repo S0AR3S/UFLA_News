@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken')
 
 const server = jsonServer.create()
 const router = jsonServer.router('./database.json')
-const userdb = JSON.parse(fs.readFileSync('./users.json', 'UTF-8'))
+let userdb = JSON.parse(fs.readFileSync('./users.json', 'UTF-8'))
 
 server.use(bodyParser.urlencoded({extended: true}))
 server.use(bodyParser.json())
@@ -79,6 +79,7 @@ fs.readFile("./users.json", (err, data) => {
 server.post('/auth/login', (req, res) => {
   console.log("login endpoint called; request body:");
   console.log(req.body);
+  userdb = JSON.parse(fs.readFileSync('./users.json', 'UTF-8'))
   const {email, password} = req.body;
   if (isAuthenticated({email, password}) === false) {
     const status = 401

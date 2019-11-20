@@ -6,7 +6,17 @@
       "likes": 17,
       "publishedAt": "09/04/2019 14:21:00",
       "image": "https://ufla.br/images/noticias/2019/selos/oportunidade.jpg",
-      "content": "Entre os dias 28 e 30 de abril de 2020, o V Congresso de Inovação e Metodologias no Ensino Superior e Tecnol�gico (V CIM) ocorrer� na UFLA. A tem�tica ser�: ?Inclus�o, perman�ncia e sucesso: como inovar para alcan�ar cada estudante??      ",
+      "content": "Entre os dias 28 e 30 de abril de 2020, o V Congresso de Inovação e Metodologias no Ensino Superior e Tecnológico (V CIM) ocorrerá na UFLA. A temática será: \"Inclusão, permanência e sucesso: como inovar para alcançar cada estudante??      ",
+      "sections": [
+        {
+          "title": "seção 1",
+          "content": "Texto da seção 1"
+        },
+        {
+          "title": "seção 2",
+          "content": "Texto da seção 2"
+        }
+      ],
       "link": "https://ufla.br/noticias/ensino/13383-v-congresso-de-inovacao-e-metodologias-no-ensino-superior-e-tecnologico/",
       "idPub": 1
     },
@@ -17,18 +27,38 @@
       "publishedAt": "09/04/2019 19:02:00",
       "image": "https://ufla.br/images/noticias/2019/10_out/WhatsApp_Image_2019-10-31_at_08.09.29.jpeg",
       "content": "O Grupo Coimbra de Universidades Brasileiras (GCUB), em parceria com a Universidade Federal do Amazonas (Ufam), realizou nesta semana, entre 28 e 31 de outubro, a XII Assembleia Geral do Grupo Coimbra de Universidades Brasileiras e o XI Seminário Internacional do Grupo Coimbra de Universidades Brasileiras. A Universidade Federal de Lavras (UFLA) esteve representada no evento pelo professor Márcio Machado Ladeira, assessor do reitor.",
+      "sections": [
+        {
+          "title": "seção 1",
+          "content": "Texto da seção 1"
+        },
+        {
+          "title": "seção 2",
+          "content": "Texto da seção 2"
+        }
+      ],
       "link": "https://ufla.br/noticias/institucional/13384-ufla-participa-de-plenaria-no-seminario-internacional-do-grupo-coimbra-de-universidades-brasileiras",
       "idPub": 2
     },
     {
       "id": 3,
-      "title": "Núcleo de estudos da UFLA promoveu tarde de atividades para as crianças da Escola Municipal Drª Dâmina",
+      "title": "Núcleo de estudos da UFLA promoveu tarde de atividades para as crianÃ§as da Escola Municipal DrÂª DÃ¢mina",
       "likes": 12,
       "publishedAt": "09/02/2019 18:23:00",
       "image": "https://ufla.br/images/arquivos/2019/11-Novembro/IMG_0051.JPG",
-      "content": "Na tarde dessa quinta-feira (31/10), o Núcleo de Estudos em Obesidade e Diabetes (Neodia), da Universidade Federal de Lavras (UFLA), em parceria com o Núcleo de Estudos em Suinocultura (Nesui)  e com o grupo de Yoga, promoveu uma tarde de comemoração ao dia das crianças com os alunos do projeto de extensão 'Programa de Intervenção Multidisciplinar nas Escolas: Prevenção da Obesidade e Diabetes Tipo 2 em Crianças de 6 a 8 Anos', desenvolvido na  Escola Municipal Dra. Dâmina.",
+      "content": "Na tarde dessa quinta-feira (31/10), o Núcleo de Estudos em Obesidade e Diabetes (Neodia), da Universidade Federal de Lavras (UFLA), em parceria com o NÃºcleo de Estudos em Suinocultura (Nesui)  e com o grupo de Yoga, promoveu uma tarde de comemoraÃ§Ã£o ao dia das crianÃ§as com os alunos do projeto de extensÃ£o 'Programa de IntervenÃ§Ã£o Multidisciplinar nas Escolas: PrevenÃ§Ã£o da Obesidade e Diabetes Tipo 2 em CrianÃ§as de 6 a 8 Anos', desenvolvido na  Escola Municipal Dra. DÃ¢mina.",
+      "sections": [
+        {
+          "title": "seção 1",
+          "content": "Texto da seção 1"
+        },
+        {
+          "title": "seção 2",
+          "content": "Texto da seção 2"
+        }
+      ],
       "link": "https://ufla.br/noticias/extensao/13389-nucleos-de-estudos-da-ufla-promoveu-tarde-de-atividades-para-as-criancas-da-escola-municipal-dr-damina",
-      "idPub": 3
+      "idPub": 2
     }
   ],
   "users": [
@@ -51,6 +81,26 @@
       "name": "tadeu",
       "email": "tadeu@tadeu.com",
       "id": 3
+    },
+    {
+      "name": "sylvio",
+      "email": "sylvao@sylviotop.com",
+      "id": 5
+    },
+    {
+      "name": "hexa",
+      "email": "hexa@hexa.com",
+      "id": 6
+    },
+    {
+      "name": "xicara",
+      "email": "xicara@email.com",
+      "id": 7
+    },
+    {
+      "name": "hector",
+      "email": "hector@email.com",
+      "id": 8
     }
   ],
   "favorites": [
@@ -63,7 +113,6 @@
   ],
   "publicadores": [
     {
-
       "nome": "RU",
       "foto": "http://www.ufla.br/dcom/wp-content/uploads/2015/07/cropped-logo-ufla-1.jpg",
       "id": 1
@@ -92,33 +141,63 @@
   "inscritos": [
     {
       "iduser": 1,
-      "idpublicador": 1,
-      "id":1
+      "publicadorId": 1,
+      "id": 1
     },
     {
       "iduser": 2,
-      "idpublicador": 2,
-      "id":2
+      "publicadorId": 2,
+      "id": 2
     },
     {
       "iduser": 3,
-      "idpublicador": 3,
-      "id":3
+      "publicadorId": 3,
+      "id": 3
     },
     {
       "iduser": 4,
-      "idpublicador": 4,
-      "id":4
+      "publicadorId": 4,
+      "id": 4
     },
     {
       "iduser": 4,
-      "idpublicador": 2,
-      "id":6
+      "publicadorId": 2,
+      "id": 6
     },
     {
       "iduser": 5,
-      "idpublicador": 5,
-      "id":5
+      "publicadorId": 5,
+      "id": 5
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "boletinId": 1,
+      "userId": 1,
+      "content": "muito legal isso",
+      "publishedAt": "09/04/2019 14:21:00"
+    },
+    {
+      "id": 2,
+      "boletinId": 1,
+      "userId": 2,
+      "content": "muito interessante isso",
+      "publishedAt": "09/04/2019 14:21:00"
+    },
+    {
+      "id": 3,
+      "boletinId": 1,
+      "userId": 3,
+      "content": "magnifico isso",
+      "publishedAt": "09/04/2019 14:21:00"
+    },
+    {
+      "id": 4,
+      "boletinId": 2,
+      "userId": 1,
+      "content": "incrivel isso",
+      "publishedAt": "09/04/2019 14:21:00"
     }
   ]
 }

@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="primary">
+  <ion-toolbar color="secondary">
     <ion-buttons slot="start">
       <ion-back-button defaultHref="tabs/news"></ion-back-button>
     </ion-buttons>
@@ -9,40 +9,94 @@
 
 <ion-content>
   <ion-card *ngIf="currentNews">
-    <ion-card-header>
-      <ion-card-title>
+    <img src="{{currentNews.image}}" class="nd-banner" />
+    <ion-card-header color="primary">
+      <ion-card-title class="ion-text">
         {{currentNews.title}}
       </ion-card-title>
-      <ion-card-subtitle>{{currentNews.publishedAt | timeAgo}}</ion-card-subtitle>
-    </ion-card-header>
-    <img src="{{currentNews.image}}" />
-    <ion-card-content>
-      <ion-grid>
-        <ion-row>
-          <ion-tab-button>
-            <ion-icon name="heart" *ngIf="likeId" (click)="handleLike()"  color="primary"></ion-icon>
-            <ion-icon name="heart" *ngIf="!likeId" (click)="handleLike()"></ion-icon>
-            <ion-label>{{currentNews.likes | likes}} likes</ion-label>
-          </ion-tab-button>
-          <ion-tab-button *ngIf="starId"  (click)="handleFavorite()">
-            <ion-icon name="star" color="primary"></ion-icon>
-            <ion-label>Favoritada</ion-label>
-          </ion-tab-button>
-          <ion-tab-button *ngIf="!starId"  (click)="handleFavorite()">
-            <ion-icon name="star-outline"></ion-icon>
-            <ion-label>Favoritar</ion-label>
-          </ion-tab-button>
-          <ion-tab-button (click)="shareWhatsApp()">
-            <ion-icon name="logo-whatsapp"></ion-icon>
-            <ion-label>Compartilhar</ion-label>
-          </ion-tab-button>
-        </ion-row>
-      </ion-grid>
+      <ion-card-subtitle>
+        <ion-grid>
+          <ion-row>
+            <ion-tab-button color="light">
+              <ion-icon name="time" *ngIf="likeId" (click)="handleLike()" color="light"></ion-icon>
+              <span>{{currentNews.publishedAt | timeAgo}}</span>
+            </ion-tab-button>
+            <ion-tab-button color="light">
+              <ion-icon name="heart" *ngIf="likeId" (click)="handleLike()" color="light"></ion-icon>
+              <ion-icon name="heart" *ngIf="!likeId" (click)="handleLike()"></ion-icon>
+              <span>{{currentNews.likes | likes}} likes</span>
+            </ion-tab-button>
 
-      <div class="ion-text-justify">{{currentNews.content}}</div>
+          </ion-row>
+        </ion-grid>
+
+      </ion-card-subtitle>
+
+    </ion-card-header>
+    <ion-card-content>
+      <div class="accordion" *ngIf="currentNews.sections">
+        <!-- Panel 1 -->
+        <div *ngFor="let section of currentNews.sections; let i = index" [attr.data-index]="i">
+          <input *ngIf="i != 0" type="radio" name="panel" id="panel-{{i+1}}">
+          <input *ngIf="i == 0" type="radio" name="panel" id="panel-{{i+1}}" checked>
+          <label for="panel-{{i+1}}"><span>{{section.title}}</span></label>
+          <div class="accordion__content accordion__content--med">
+            <div class="ion-text-justify">{{section.content}}</div>
+          </div>
+        </div>
+      </div>
     </ion-card-content>
   </ion-card>
+
+
+
+  <!------------------------------>
+
+  <ion-card *ngIf="comments">
+    <ion-card-header color="primary">
+      <ion-card-title class="ion-text">
+        Comentarios
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item *ngFor="let comment of comments" class="nd-comment">
+        <ion-grid>
+          <ion-row>
+            <ion-label>
+              <span class="user">{{comment.user.name}}</span>
+            </ion-label>
+          </ion-row>
+          <ion-row>
+            <span class="content">{{comment.content}}</span>
+          </ion-row>
+          <ion-row class="timeparent">
+            <span class="time">{{comment.publishedAt | timeAgo}}</span>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-input></ion-input>
+      </ion-col>
+
+      <ion-col>
+        <ion-tab-button color="light">
+          <ion-icon name="send" *ngIf="likeId" (click)="handleLike()" color="primary"></ion-icon>
+          <span>Comentar</span>
+        </ion-tab-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
+
+
+  <!------------------------------->
+
+
 </ion-content>
-<ion-footer *ngIf="currentNews">
-  <ion-button color="secondary" expand="block" href="{{currentNews.link}}" target="_blank">Ler mais...</ion-button>
-</ion-footer>

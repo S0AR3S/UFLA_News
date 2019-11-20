@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs/more"></ion-back-button>
+    </ion-buttons>
+    <ion-title>UFLA News</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-card *ngIf="currentPublisher">
+
+    <img src="{{currentPublisher.foto}}" class="nd-banner" />
+    <ion-card-header color="secondary">
+      <ion-card-title class="ion-publisher-name-text">
+        <div class="ion-publisher-text">publicador</div>
+        {{currentPublisher.nome}}
+      </ion-card-title>
+      <ion-card-subtitle class="pp-subtitle">
+        <ion-label>Seguir: </ion-label><br />
+        <ion-toggle color="light"></ion-toggle>
+      </ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card *ngFor="let news of boletins" [routerLink]="['/details', news.id]" color="primary">
+    <img src="{{news.image}}" />
+    <ion-card-header>
+      <ion-card-title class="ion-text">
+        {{news.title}}
+      </ion-card-title>
+      <ion-card-subtitle >{{news.likes | likes}} likes | {{news.publishedAt | timeAgo}}</ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
+
+</ion-content>

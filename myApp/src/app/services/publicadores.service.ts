@@ -28,6 +28,16 @@ const API_URL: string = "http://localhost:8000";
       return options;
     }
 
+    async searchById(id: number): Promise<publicadoresModel> {
+      const options = await this.getHttpOptions();
+  
+      return this.http.get(`${API_URL}/publicadores/${id}`, options).map(
+        (item: publicadoresModel) => {
+          return new publicadoresModel(item.id, item.nome, item.foto);
+        }
+      ).toPromise();
+    }  
+
     async getAll(): Promise<publicadoresModel[]> {
         const options = await this.getHttpOptions();
     

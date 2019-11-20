@@ -45,7 +45,7 @@ export class FavoritesService {
 
     this.lista = await this.getAllByUser(iduser)
 
-      return this.http.get(`${API_URL}/publicadores?id=${this.lista[0].idpublicador}`, options).map(
+      return this.http.get(`${API_URL}/publicadores?id=${this.lista.map((pub)=> pub.idpublicador).join("%2C")}`, options).map(
         
       (itens: publicadoresModel[]) => {
         
@@ -69,7 +69,6 @@ export class FavoritesService {
         return itens.map(
           (item: FavoriteModel) => {
             return new FavoriteModel(item.iduser, item.idpublicador, item.id);
-            
           }
           )
         }

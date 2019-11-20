@@ -9,6 +9,7 @@ import { UserModel } from 'src/app/model/user.model';
 import { AuthService } from 'src/app/services/auth.service';
 import { UserService } from 'src/app/services/user.service';
 import { publicadoresModel } from 'src/app/model/publicadores.model';
+import { CommentModel } from 'src/app/model/comment.model';
 
 @Component({
   selector: 'app-news-detail',
@@ -18,6 +19,7 @@ import { publicadoresModel } from 'src/app/model/publicadores.model';
 export class NewsDetailPage implements OnInit {
 
   currentNews: NewsModel;
+  comments: CommentModel[];
   starId: number;
   likeId: number;
   newsId: number;
@@ -40,6 +42,7 @@ export class NewsDetailPage implements OnInit {
     this.newsId = parseInt(this.activatedRoute.snapshot.paramMap.get('id'));
 
     this.currentNews = await this.newsService.searchById(this.newsId);
+    this.comments = await this.newsService.getAllCommentsByBoletimId(this.newsId);
     this.starId = await this.favoritesService.getFavoriteId(this.user.id, this.newsId);
     this.likeId = await this.favoritesService.getFavoriteId(this.user.id, this.newsId);
   }
