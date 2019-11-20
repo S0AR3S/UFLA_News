@@ -52,18 +52,22 @@
 
   <!------------------------------>
 
-  <ion-card *ngIf="comments">
-    <ion-card-header color="primary">
+  <ion-card *ngIf="comments" color="secondary">
+    <ion-card-header color="secondary">
       <ion-card-title class="ion-text">
         Comentarios
       </ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <ion-item *ngFor="let comment of comments" class="nd-comment">
+      <ion-item *ngFor="let comment of comments"
+        class="nd-comment {{user.id == comment.user.id ? 'nd-comment-self' : '' }}">
         <ion-grid>
           <ion-row>
             <ion-label>
               <span class="user">{{comment.user.name}}</span>
+              <span *ngIf="user.id == comment.user.id" class="user" class="exclude-self">
+                <ion-icon name="trash" color="danger"></ion-icon>
+              </span>
             </ion-label>
           </ion-row>
           <ion-row>
@@ -74,24 +78,14 @@
           </ion-row>
         </ion-grid>
       </ion-item>
+      <div class="comment-input">
+          <ion-item color="secondary">
+            <ion-input class="comment-text-input" placeholder=" Escreva seu comentario..."></ion-input>
+            <ion-icon name="send" *ngIf="likeId" (click)="handleLike()" color="primary"></ion-icon>
+          </ion-item>
+        </div>
     </ion-card-content>
   </ion-card>
-
-  <ion-grid>
-    <ion-row>
-      <ion-col>
-        <ion-input></ion-input>
-      </ion-col>
-
-      <ion-col>
-        <ion-tab-button color="light">
-          <ion-icon name="send" *ngIf="likeId" (click)="handleLike()" color="primary"></ion-icon>
-          <span>Comentar</span>
-        </ion-tab-button>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-
 
 
 

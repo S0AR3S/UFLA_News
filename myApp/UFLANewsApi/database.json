@@ -9,12 +9,12 @@
       "content": "Entre os dias 28 e 30 de abril de 2020, o V Congresso de Inovação e Metodologias no Ensino Superior e Tecnológico (V CIM) ocorrerá na UFLA. A temática será: \"Inclusão, permanência e sucesso: como inovar para alcançar cada estudante??      ",
       "sections": [
         {
-          "title": "seção 1",
-          "content": "Texto da seção 1"
+          "title": "Introdução",
+          "content": "Entre os dias 28 e 30 de abril de 2020, o V Congresso de Inovação e Metodologias no Ensino Superior e Tecnológico (V CIM) ocorrerá na UFLA. A temática será: \"Inclusão, permanência e sucesso: como inovar para alcançar cada estudante??      "
         },
         {
-          "title": "seção 2",
-          "content": "Texto da seção 2"
+          "title": "Datas",
+          "content": "Entre os dias 28 e 30 de abril de 2020, o V Congresso de Inovação e Metodologias no Ensino Superior e Tecnológico (V CIM) ocorrerá na UFLA. A temática será: \"Inclusão, permanência e sucesso: como inovar para alcançar cada estudante??      "
         }
       ],
       "link": "https://ufla.br/noticias/ensino/13383-v-congresso-de-inovacao-e-metodologias-no-ensino-superior-e-tecnologico/",
@@ -29,12 +29,12 @@
       "content": "O Grupo Coimbra de Universidades Brasileiras (GCUB), em parceria com a Universidade Federal do Amazonas (Ufam), realizou nesta semana, entre 28 e 31 de outubro, a XII Assembleia Geral do Grupo Coimbra de Universidades Brasileiras e o XI Seminário Internacional do Grupo Coimbra de Universidades Brasileiras. A Universidade Federal de Lavras (UFLA) esteve representada no evento pelo professor Márcio Machado Ladeira, assessor do reitor.",
       "sections": [
         {
-          "title": "seção 1",
-          "content": "Texto da seção 1"
+          "title": "Introdução",
+          "content": "O Grupo Coimbra de Universidades Brasileiras (GCUB), em parceria com a Universidade Federal do Amazonas (Ufam), realizou nesta semana, entre 28 e 31 de outubro, a XII Assembleia Geral do Grupo Coimbra de Universidades Brasileiras e o XI Seminário Internacional do Grupo Coimbra de Universidades Brasileiras. A Universidade Federal de Lavras (UFLA) esteve representada no evento pelo professor Márcio Machado Ladeira, assessor do reitor."
         },
         {
-          "title": "seção 2",
-          "content": "Texto da seção 2"
+          "title": "Metodologia",
+          "content": "Texto da metodologia"
         }
       ],
       "link": "https://ufla.br/noticias/institucional/13384-ufla-participa-de-plenaria-no-seminario-internacional-do-grupo-coimbra-de-universidades-brasileiras",
@@ -50,7 +50,7 @@
       "sections": [
         {
           "title": "seção 1",
-          "content": "Texto da seção 1"
+          "content": "Na tarde dessa quinta-feira (31/10), o Núcleo de Estudos em Obesidade e Diabetes (Neodia), da Universidade Federal de Lavras (UFLA), em parceria com o NÃºcleo de Estudos em Suinocultura (Nesui)  e com o grupo de Yoga, promoveu uma tarde de comemoraÃ§Ã£o ao dia das crianÃ§as com os alunos do projeto de extensÃ£o 'Programa de IntervenÃ§Ã£o Multidisciplinar nas Escolas: Prevenção da Obesidade e Diabetes Tipo 2 em Crianças de 6 a 8 Anos', desenvolvido na  Escola Municipal Dra. Damina."
         },
         {
           "title": "seção 2",
@@ -197,6 +197,13 @@
       "boletinId": 2,
       "userId": 1,
       "content": "incrivel isso",
+      "publishedAt": "09/04/2019 14:21:00"
+    },
+    {
+      "id": 5,
+      "boletinId": 1,
+      "userId": 4,
+      "content": "muito legal isso meeesmo",
       "publishedAt": "09/04/2019 14:21:00"
     }
   ]

@@ -111,7 +111,7 @@ body {
     position: relative;
     padding: 0 1.5em;
     background: white;
-    color: dark-grey;
+    color: var(--ion-color-dark-shade);
     transition: height 0.5s ease-out;
 
     .accordion__header {
@@ -138,13 +138,21 @@ ion-tab-button {
 
 .nd-comment {
   padding: 15px;
-  border-radius: 15px;
-  border: solid 4px var(--ion-color-light-shade);
+  border-radius: 30px;
+  border-bottom-left-radius: 0px;
+  // border: solid 4px var(--ion-color-light-shade);
   margin: 5px auto 5px auto;
   padding: 1vh 0px 0vh 0px;
 
   .ion-label {
     background: var(--ion-color-light-shade) !important;
+    width: 100% !important;
+  }
+  .item-native{
+    background: var(--ion-color-light-shade) !important;
+  }
+  .sc-ion-label-md-h {
+    width: 100% !important;
   }
   .user{
     padding-left: -25px;
@@ -160,10 +168,33 @@ ion-tab-button {
   .content {
     padding-left: 5px;
   }
+  .exclude-self{
+    padding-left: -25px;
+    font-weight: bold;
+    color: var(--ion-color-light-shade);
+    float: right;
+  }
 }
 
+.nd-comment-self {
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 30px;
+
+}
 .ion-input {
     min-width:  !important;
+}
+.comment-input {
+  margin-top: 20px;
+  background: var(--ion-color-secondary) !important;
+}
+.comment-text-input{
+  background: var(--ion-color-light) !important;
+  color: var(--ion-color-dark) !important;
+  margin-right: 10px;
+  border-radius: 10px;
+  padding-left: 5px;
+
 }
 /* 
 * Size Variations
