@@ -61,48 +61,88 @@
       "idPub": 2
     }
   ],
-  "users": [
+  "users":[
     {
-      "id": 1,
-      "name": "Paulo",
-      "email": "paulo@paulo.com"
-    },
-    {
-      "name": "jose",
-      "email": "jose@jose.com",
-      "id": 2
-    },
-    {
-      "name": "bruno",
-      "email": "bruno@email.com",
-      "id": 4
-    },
-    {
-      "name": "tadeu",
-      "email": "tadeu@tadeu.com",
-      "id": 3
-    },
-    {
-      "name": "sylvio",
-      "email": "sylvao@sylviotop.com",
-      "id": 5
-    },
-    {
-      "name": "hexa",
-      "email": "hexa@hexa.com",
-      "id": 6
-    },
-    {
-      "name": "xicara",
-      "email": "xicara@email.com",
-      "id": 7
-    },
-    {
-      "name": "hector",
-      "email": "hector@email.com",
-      "id": 8
-    }
-  ],
+      "id":1,
+      "email":"bruno@email.com",
+      "name":"bruno"
+      },
+      {
+      "id":2,
+      "email":"techie@email.com",
+      "name":"techie"
+      },
+      {
+      "id":3,
+      "email":"nilson@email.com",
+      "name":"nilson"
+      },
+      {
+      "id":4,
+      "email":"nilson1@email.com",
+      "name":"nilson"
+      },
+      {
+      "id":5,
+      "email":"nilson2@email.com",
+      "name":"nilson"
+      },
+      {
+      "id":6,
+      "email":"nilson3@email.com",
+      "name":"nilson"
+      },
+      {
+      "id":7,
+      "email":"nilson4@email.com",
+      "name":"nilson"
+      },
+      {
+      "id":8,
+      "email":"nilson7@email.com",
+      "name":"nilson"
+      },
+      {
+      "id":9,
+      "email":"nilson8@email.com",
+      "name":"nilson"
+      },
+      {
+      "id":12,
+      "email":"paulo@paulo.com",
+      "name":"paulo"
+      },
+      {
+      "id":13,
+      "email":"jose@jose.com",
+      "name":"jose"
+      },
+      {
+      "id":14,
+      "email":"tadeu@tadeu.com",
+      "name":"tadeu"
+      },
+      {
+      "id":15,
+      "email":"sylvao@sylviotop.com",
+      "name":"sylvio"
+      },
+      {
+      "id":16,
+      "email":"hexa@hexa.com",
+      "name":"hexa"
+      },
+      {
+      "id":17,
+      "email":"xicara@email.com",
+      "name":"xicara"
+      },
+      {
+      "id":18,
+      "email":"hector@email.com",
+      "name":"hector"
+      }
+      ],
   "favorites": [
     {
       "newsId": 1,
@@ -140,32 +180,32 @@
   ],
   "inscritos": [
     {
-      "iduser": 1,
+      "userId": 1,
       "publicadorId": 1,
       "id": 1
     },
     {
-      "iduser": 2,
+      "userId": 2,
       "publicadorId": 2,
       "id": 2
     },
     {
-      "iduser": 3,
+      "userId": 3,
       "publicadorId": 3,
       "id": 3
     },
     {
-      "iduser": 4,
+      "userId": 4,
       "publicadorId": 4,
       "id": 4
     },
     {
-      "iduser": 4,
+      "userId": 4,
       "publicadorId": 2,
       "id": 6
     },
     {
-      "iduser": 5,
+      "userId": 5,
       "publicadorId": 5,
       "id": 5
     }

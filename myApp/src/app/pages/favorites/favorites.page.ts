@@ -13,7 +13,7 @@ import { publicadoresModel } from 'src/app/model/publicadores.model';
 })
 export class FavoritesPage implements OnInit {
 
-  lstInscritos: publicadoresModel[];
+  lstInscritos: FavoriteModel[];
   user: UserModel;
 
   constructor(
@@ -27,13 +27,14 @@ export class FavoritesPage implements OnInit {
     this.user = await this.userService.getUserByEmail(userEmail);
 
     this.lstInscritos = await this.favoritesService.
-      getInscritos(this.user.id);
+    getAllByUser(this.user.id);
+    console.log(this.lstInscritos)
   }
 
   async doRefresh(event: any) {
     try {
       this.lstInscritos = await this.favoritesService.
-        getInscritos(this.user.id);
+      getAllByUser(this.user.id);
     } finally {
       event.target.complete();
     }
