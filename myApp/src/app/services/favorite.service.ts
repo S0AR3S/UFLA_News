@@ -5,8 +5,9 @@ import 'rxjs/Rx';
 
 import { FavoriteModel } from '../model/favorite.model';
 import { AuthService } from './auth.service';
-import {publicadoresService} from './publicadores.service';
+import { publicadoresService } from './publicadores.service';
 import { publicadoresModel } from '../model/publicadores.model';
+import { UserModel } from '../model/user.model';
 
 const API_URL: string = "http://localhost:8000";
 
@@ -44,21 +45,26 @@ export class FavoritesService {
   async getAllByUser(userId: number): Promise<FavoriteModel[]> {
     const options = await this.getHttpOptions();
 
-    return this.http.get(`${API_URL}/inscritos?_expand=user&_expand=publicador&userId=${userId}`, options).map(
+    return this.http.get(`${API_URL}/inscritos?_expand=user&_expand=publicadore&userId=${userId}`, options).map(
       (itens: FavoriteModel[]) => {
+        console.log(JSON.stringify(itens, null, 2));
         return itens.map(
           (item: FavoriteModel) => {
-            return new FavoriteModel(item.user, item.publicador, item.id);
+            return new FavoriteModel(
+              new UserModel(item.user.id, item.user.name, item.user.email),
+              new publicadoresModel(item.publicadore.id, item.publicadore.nome, item.publicadore.foto),
+              item.id
+            );
           }
         )
       }
-      ).toPromise();
-    }
-    
+    ).toPromise();
+  }
 
-  async add(inscritos: FavoriteModel): Promise<number> {    
+
+  async add(inscritos: FavoriteModel): Promise<number> {
     const data: any = {
-      publicadorId: inscritos.publicador,
+      publicadorId: inscritos.publicadore,
       userId: inscritos.user,
     }
 

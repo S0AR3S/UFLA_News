@@ -180,33 +180,33 @@
   ],
   "inscritos": [
     {
-      "userId": 1,
-      "publicadorId": 1,
+      "userId": 4,
+      "publicadoreId": 1,
       "id": 1
     },
     {
       "userId": 2,
-      "publicadorId": 2,
+      "publicadoreId": 2,
       "id": 2
     },
     {
       "userId": 3,
-      "publicadorId": 3,
+      "publicadoreId": 3,
       "id": 3
     },
     {
-      "userId": 4,
-      "publicadorId": 4,
+      "userId": 1,
+      "publicadoreId": 4,
       "id": 4
     },
     {
-      "userId": 4,
-      "publicadorId": 2,
+      "userId": 1,
+      "publicadoreId": 2,
       "id": 6
     },
     {
       "userId": 5,
-      "publicadorId": 5,
+      "publicadoreId": 5,
       "id": 5
     }
   ],
