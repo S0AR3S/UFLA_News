@@ -66,7 +66,7 @@
             <ion-label>
               <span class="user">{{comment.user.name}}</span>
               <span *ngIf="user.id == comment.user.id" class="user" class="exclude-self">
-                <ion-icon name="trash" color="danger"></ion-icon>
+                <ion-icon name="trash" (click)="deleteComment(comment.id)" color="danger"></ion-icon>
               </span>
             </ion-label>
           </ion-row>
@@ -80,8 +80,8 @@
       </ion-item>
       <div class="comment-input">
           <ion-item color="secondary">
-            <ion-input class="comment-text-input" placeholder=" Escreva seu comentario..."></ion-input>
-            <ion-icon name="send" *ngIf="likeId" (click)="handleLike()" color="primary"></ion-icon>
+            <ion-input class="comment-text-input" placeholder=" Escreva seu comentario..." [(ngModel)]="commentInput.content"></ion-input>
+            <ion-icon name="send" *ngIf="likeId" (click)="saveComment()" color="primary"></ion-icon>
           </ion-item>
         </div>
     </ion-card-content>

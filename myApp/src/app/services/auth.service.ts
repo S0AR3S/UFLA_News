@@ -36,6 +36,7 @@ export class AuthService {
   }
 
   async login(email: string, password: string) {
+    console.log("lOgIn");
     const data = {
       "email": email,
       "password": password
