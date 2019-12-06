@@ -35,7 +35,7 @@ export class FavoritesService {
   async getFavoriteId(iduser: number, idpublicador: number): Promise<number> {
     const options = await this.getHttpOptions();
 
-    return this.http.get(`${API_URL}/inscritos?iduser=${iduser}&publicadorId=${idpublicador}`, options).map(
+    return this.http.get(`${API_URL}/inscritos?userId=${iduser}&publicadoreId=${idpublicador}`, options).map(
       (inscritos: FavoriteModel[]) => {
         return (inscritos.length == 0) ? null : inscritos[0].id;
       }
@@ -64,8 +64,9 @@ export class FavoritesService {
 
   async add(inscritos: FavoriteModel): Promise<number> {
     const data: any = {
-      publicadorId: inscritos.publicadore,
-      userId: inscritos.user,
+      userId: inscritos.user.id,
+      publicadoreId: inscritos.publicadore.id,
+
     }
 
     const options = await this.getHttpOptions();

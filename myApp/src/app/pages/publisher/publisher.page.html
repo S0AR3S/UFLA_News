@@ -20,10 +20,17 @@
         <div class="ion-publisher-text">publicador</div>
         {{currentPublisher.nome}}
       </ion-card-title>
-      <ion-card-subtitle class="pp-subtitle">
-        <ion-label>Seguir: </ion-label><br />
-        <ion-toggle color="light"></ion-toggle>
+      <ion-card-subtitle  class="pp-subtitle">
+        <ion-tab-button *ngIf="inscritoId"  (click)="handleFavorite()">
+          <ion-toggle  checked color='light'></ion-toggle>
+          <ion-label>Seguindo</ion-label>
+        </ion-tab-button>
+        <ion-tab-button *ngIf="!inscritoId"  (click)="handleFavorite()">
+          <ion-toggle color='light'></ion-toggle>
+          <ion-label>Seguir</ion-label>
+        </ion-tab-button>
       </ion-card-subtitle>
+      
     </ion-card-header>
   </ion-card>
 
