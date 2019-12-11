@@ -105,7 +105,7 @@ export class NewsService {
         return itens.map(
           (item: CommentModel) => {
             return new CommentModel(
-              item.content, item.publishedAt, new UserModel(item.user.id, item.user.name, item.user.email));
+              item.id, item.content, item.publishedAt, new UserModel(item.user.id, item.user.name, item.user.email));
           }
         )
       }
@@ -121,5 +121,24 @@ export class NewsService {
           item.image, item.content, item.link, item.sections.map(section => new SectionModel(section.title, section.content)));
       }
     ).toPromise();
+  }
+
+  async comment(comment: CommentModel) {
+    const options = await this.getHttpOptions();
+    const payload = {
+        boletinId: comment.boletim.id,
+        userId: comment.user.id,
+        content: comment.content,
+        publishedAt: comment.publishedAt
+    }
+    const savedComment: any = await this.http.post(`${API_URL}/comments`, payload, options).toPromise();
+    const item: any = await this.http.get(`${API_URL}/comments/${savedComment.id}?_expand=user`, options).toPromise()
+    return new CommentModel(item.id, item.content, item.publishedAt, new UserModel(item.user.id, item.user.name, item.user.email));
+  }
+
+  async deleteComment(id: number) {
+    const options = await this.getHttpOptions();
+
+    return this.http.delete(`${API_URL}/comments/${id}`, options).toPromise();
   }
 }

@@ -10,6 +10,7 @@ import { AuthService } from 'src/app/services/auth.service';
 import { UserService } from 'src/app/services/user.service';
 import { publicadoresModel } from 'src/app/model/publicadores.model';
 import { CommentModel } from 'src/app/model/comment.model';
+import { ToastService, MessageType } from 'src/app/services/toast.service';
 
 @Component({
   selector: 'app-news-detail',
@@ -20,6 +21,7 @@ export class NewsDetailPage implements OnInit {
 
   currentNews: NewsModel;
   comments: CommentModel[];
+  commentInput: CommentModel;
   starId: number;
   likeId: number;
   newsId: number;
@@ -32,12 +34,14 @@ export class NewsDetailPage implements OnInit {
     public newsService: NewsService,
     public favoritesService: FavoritesService,
     public authService: AuthService,
-    public userService: UserService) {
+    public userService: UserService,
+    public toastService: ToastService) {
   }
 
   async ngOnInit() {
     const userEmail = await this.authService.getAuthEmail();
     this.user = await this.userService.getUserByEmail(userEmail);
+    this.commentInput = new CommentModel();
 
     this.newsId = parseInt(this.activatedRoute.snapshot.paramMap.get('id'));
 
@@ -53,6 +57,37 @@ export class NewsDetailPage implements OnInit {
       this.socialSharing.shareViaWhatsApp(this.currentNews.title,
         this.currentNews.image, this.currentNews.link);
     }
+  }
+  checkForm() {
+    if (
+      this.commentInput.content == undefined || this.commentInput.content.trim() == "") {
+      this.toastService.presentMessage("Por favor, escreva um comentário para enviá-lo!", MessageType.ERROR);
+      return false;
+    }
+    return true;
+  }
+
+  async saveComment() {
+    if (this.checkForm()) {
+      try {
+        this.commentInput.publishedAt = new Date();
+        this.commentInput.user = this.user;
+        this.commentInput.boletim = this.currentNews;
+        this.comments.push(await this.newsService.comment(this.commentInput));
+
+        this.commentInput = new CommentModel();
+        this.toastService.presentMessage("Comentario realizado com sucesso!", MessageType.SUCCESS);
+      } catch (error) {
+        this.toastService.presentMessage(`Erro ao realizar comentario! ${error.message}`, MessageType.ERROR);
+      }
+    }
+
+  }
+
+  async deleteComment(id) {
+        await this.newsService.deleteComment(id);
+        this.comments = this.comments.filter(comment => comment.id != id)
+        this.toastService.presentMessage("Comentario apagado com sucesso!", MessageType.SUCCESS);
   }
 
   // async handleFavorite() {
